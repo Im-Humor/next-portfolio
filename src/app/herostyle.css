@@ -23,10 +23,58 @@
     box-shadow: 0px 30px 30px rgba(212, 212, 212, 0.5);
     z-index: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.hero-image {
+    height: 100%;
 }
 
 .hero-image img {
     height: 100%;
+    width: 100%;
+}
+
+.hero-desc {
+    margin-left: 5rem;
+}
+
+.hero-desc-greeting {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: .1rem;
+}
+
+.hero-desc-name {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero-desc-title {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.hero-desc-desc {
+    margin-top: 4rem;
+    font-size: 16px;
+    font-weight: normal;
+    color: gray;
+}
+
+.hero-icons {
+    margin-top: 2rem;
+}
+
+.hero-icon-line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-icons img {
+    filter: invert(37%) sepia(79%) saturate(3618%) hue-rotate(235deg) brightness(100%) contrast(93%);
+    height: 1.5rem;
+    margin-right: 1rem;
 }

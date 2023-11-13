@@ -10,13 +10,13 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 2px;
+    padding: 5px;
 }
 
 .about-bar-inner {
     width: 0%;
     height: 100%;
-    background-color: grey;
+background-image: linear-gradient(to right, rgb(115, 92, 247), rgb(97, 221, 255));
     border-radius: 10px;
 
 }

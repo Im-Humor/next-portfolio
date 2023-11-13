@@ -9,9 +9,27 @@ export default function Hero() {
 				</div>
 				<div className="hero-desc">
 					{" "}
-					<h3>Hi, I'm Daniel Morris</h3>
-					<h4>Junior Web Developer</h4>
-					<p>Welcome to my site</p>
+					<p className="hero-desc-greeting">HELLO! MY NAME IS</p>
+					<h3 className="hero-desc-name">DANIEL MORRIS</h3>
+					<h4 className="hero-desc-title">JUNIOR WEB DEVELOPER</h4>
+					<p className="hero-desc-desc">Welcome to my site</p>
+					<div className="hero-icons">
+						<div className="hero-icon-line">
+							{" "}
+							<img src="/static/phone-svgrepo-com.svg" alt="" />
+							623-810-4117
+						</div>
+						<div className="hero-icon-line">
+							{" "}
+							<img src="/static/mail-svgrepo-com.svg" alt="" />
+							daniel@danielmorris.me
+						</div>
+						<div className="hero-icon-line">
+							{" "}
+							<img src="/static/house.svg" alt="" />
+							Phoenix, Arizona
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
