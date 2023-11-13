@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position: absolute;
+    animation-duration: 1s;
+    animation-name: nav-dropin;
+    animation-fill-mode: forwards;
+    color: white;
+}
+
+.header-scrolling {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    animation-duration: 1s;
+    animation-name: nav-background-2;
+    animation-fill-mode: forwards;
+    color: white;
+}
+
+.header-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-link {
+    margin: 0 2rem;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.header-link-text {
+    color: white;
+    text-decoration: none;
+}
+
+.color-div {
+    background-image: linear-gradient(to right, rgb(115, 92, 247), rgb(97, 221, 255));
+}
+
+.color-div-large {
+    height: 600px;
+    background-color: gray;
+}
+
+.white-div {
+    height: 600px;
+}
+
+.about-desc {
+    width: 50%;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes nav-background-2 {
+    0%{}
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes nav-dropin {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+

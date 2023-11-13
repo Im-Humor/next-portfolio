@@ -1,0 +1,32 @@
+.under-hero {
+    padding: 10rem 4rem 4rem 4rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hero-color-div {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-div {
+    background-color: white;
+    height: 600px;
+    min-width: 80%;
+    max-width: 800px;
+    position: relative;
+    top: 6rem;
+    border-radius: 10px;
+    padding: 5rem;
+    box-shadow: 0px 30px 30px rgba(212, 212, 212, 0.5);
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-image img {
+    height: 100%;
+}

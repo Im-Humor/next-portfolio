@@ -1,0 +1,90 @@
+.about-bars-container {
+    width: 50%;
+}
+
+.about-bar-outer {
+    width: 100%;
+    height: 1.5rem;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2px;
+}
+
+.about-bar-inner {
+    width: 0%;
+    height: 100%;
+    background-color: grey;
+    border-radius: 10px;
+
+}
+
+.bar-load#html {
+    animation-name: load-bar-html;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bar-load#javascript {
+    animation-name: load-bar-javascript;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bar-load#css {
+    animation-name: load-bar-css;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bar-load#react {
+    animation-name: load-bar-react;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes load-bar-html {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes load-bar-javascript {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes load-bar-css {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes load-bar-react {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 65%;
+    }
+}

@@ -1,0 +1,26 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.grey-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(211, 211, 211, 0.5);
+    height: 100vh;
+    width: 100vw;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    margin: 2rem;
+}
