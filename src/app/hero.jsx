@@ -30,6 +30,15 @@ export default function Hero() {
 							Phoenix, Arizona
 						</div>
 					</div>
+					<div className="hero-buttons">
+						<a
+							href="https://linkedin.com/in/mrdanielrmorris"
+							className="hero-button"
+							target="_blank"
+						>
+							<img src="/static/linkedin-icon.svg" alt="" />
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

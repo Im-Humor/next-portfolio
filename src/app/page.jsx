@@ -10,22 +10,15 @@ export default function Home() {
 		<div className="home-container">
 			<Hero />
 			<div className="white-div under-hero">
-				<div className="about-desc">
-					{" "}
-					<h3>About Myself</h3>
-					<p>
-						Graduated from NAU, worked in marketing, now I develop!
-					</p>
-				</div>
 				<AboutBar />
 			</div>
 			<div className="color-div under-exp">
 				<ExpSection />
 			</div>
-			<div className="white-div">
+			<div className="white-div specialty-div">
 				<SpecialtySection />
 			</div>
-			<div className="color-div-large">
+			<div className="projects-div">
 				<Projects />
 			</div>
 		</div>

@@ -23,39 +23,64 @@ export default function AboutBar() {
 	});
 
 	return (
-		<div className="about-bars-container">
-			<div className="about-bar-container">
+		<div className="about-bars-section">
+			{" "}
+			<div className="about-desc-container">
 				{" "}
-				<h4>HTML 85%</h4>
-				<div className="about-bar-outer">
-					<div className="about-bar-inner bar-load" id="html"></div>
+				<div className="about-desc-header">
+					{" "}
+					<h3>ABOUT MYSELF</h3>
+				</div>
+				<div className="about-desc-content">
+					{" "}
+					<p>
+						Graduated from NAU, worked in marketing, now I develop!
+					</p>
 				</div>
 			</div>
-
-			<div className="about-bar-container">
-				{" "}
-				<h4>Javascript 80%</h4>
-				<div className="about-bar-outer">
-					<div
-						className="about-bar-inner bar-load"
-						id="javascript"
-					></div>
+			<div className="about-bars-container">
+				<div className="about-bar-container">
+					{" "}
+					<h4>HTML 85%</h4>
+					<div className="about-bar-outer">
+						<div
+							className="about-bar-inner bar-load"
+							id="html"
+						></div>
+					</div>
 				</div>
-			</div>
 
-			<div className="about-bar-container">
-				{" "}
-				<h4>CSS 75%</h4>
-				<div className="about-bar-outer">
-					<div className="about-bar-inner bar-load" id="css"></div>
+				<div className="about-bar-container">
+					{" "}
+					<h4>Javascript 80%</h4>
+					<div className="about-bar-outer">
+						<div
+							className="about-bar-inner bar-load"
+							id="javascript"
+						></div>
+					</div>
 				</div>
-			</div>
 
-			<div className="about-bar-container">
-				{" "}
-				<h4>React 65%</h4>
-				<div className="about-bar-outer">
-					<div className="about-bar-inner bar-load" id="react"></div>
+				<div className="about-bar-container">
+					{" "}
+					<h4>CSS 75%</h4>
+					<div className="about-bar-outer">
+						<div
+							className="about-bar-inner bar-load"
+							id="css"
+						></div>
+					</div>
+				</div>
+
+				<div className="about-bar-container">
+					{" "}
+					<h4>React / Next.JS 65%</h4>
+					<div className="about-bar-outer">
+						<div
+							className="about-bar-inner bar-load"
+							id="react"
+						></div>
+					</div>
 				</div>
 			</div>
 		</div>

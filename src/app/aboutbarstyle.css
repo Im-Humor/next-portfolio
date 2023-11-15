@@ -1,5 +1,41 @@
+.under-hero {
+    padding: 10rem 4rem 4rem 4rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-bars-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 10rem;
+}
+
+.about-desc-container {
+    width: 50%;
+}
+
+.about-desc-header h3 {
+    font-size: 36px;
+}
+
+.about-desc-content {
+    margin-top: 2rem;
+}
+
 .about-bars-container {
     width: 50%;
+}
+
+.about-bar-container {
+    margin-bottom: 1rem;
+}
+
+.about-bar-container h4 {
+    font-weight: 300
 }
 
 .about-bar-outer {
@@ -11,6 +47,7 @@
     justify-content: left;
     align-items: center;
     padding: 5px;
+    margin-top: 1rem;
 }
 
 .about-bar-inner {
