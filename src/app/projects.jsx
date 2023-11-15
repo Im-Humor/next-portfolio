@@ -22,7 +22,7 @@ export const ProjectCard = ({ imgsrc, title, subtext, tags }) => {
 
 			{expandState == true && (
 				<div className="grey-overlay" onClick={handleCloseClick}>
-					<button>X</button>
+					<button className="overlay-close-button">CLOSE</button>
 					<img src={imgsrc} alt="text" />
 				</div>
 			)}
@@ -34,10 +34,10 @@ export default function Projects() {
 	return (
 		<div className="projects-container">
 			<div className="projects-header">
-				<h3>Recent Projects</h3>
-				<h5>
+				<h3>RECENT PROJECTS</h3>
+				<h4>
 					Recently completed works and their underlying technologies
-				</h5>
+				</h4>
 			</div>
 			<div className="project-cards">
 				<ProjectCard
