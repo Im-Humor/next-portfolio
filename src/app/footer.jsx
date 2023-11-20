@@ -28,7 +28,7 @@ export default function Footer() {
 					<h4>Follow Me</h4>
 				</div>
 				<div className="footer-social-desc">
-					<p>Let's connect!</p>
+					<p>Let&apos;s connect!</p>
 					<a
 						href="https://www.linkedin.com/in/mrdanielrmorris/"
 						target="_blank"

@@ -1,12 +1,8 @@
-.footer-div-black {
-    background-color: black;
-    padding: 7rem 4rem;
-}
-
 .footer-container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+        width: 1200px;
 }
 
 .footer-container h4 {

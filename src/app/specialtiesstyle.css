@@ -1,6 +1,9 @@
 .specialty-div {
     background-color: rgb(247, 247, 247);
     padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .specialty-header {
@@ -20,6 +23,7 @@
 
 .specialty-section {
     height: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

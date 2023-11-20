@@ -8,14 +8,15 @@
 
 .about-bars-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    padding: 0 10rem;
+    width: 1200px;
+    flex-wrap: wrap;
 }
 
-.about-desc-container {
-    width: 50%;
+.about-bars-section > div {
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 .about-desc-header h3 {
@@ -24,10 +25,6 @@
 
 .about-desc-content {
     margin-top: 2rem;
-}
-
-.about-bars-container {
-    width: 50%;
 }
 
 .about-bar-container {

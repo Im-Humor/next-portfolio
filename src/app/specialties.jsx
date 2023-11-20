@@ -46,7 +46,7 @@ export default function SpecialtySection() {
 					</p>
 				</SpecialtyCard>
 				<SpecialtyCard title="Site Analytics">
-					Using Google Analytics and Google's available suite of
+					Using Google Analytics and Google&apos;s available suite of
 					analytics tools, I can craft explanations of user behavior
 					and provide insight into testing strategies that can
 					increase user engagement and improve site useability.
