@@ -24,12 +24,6 @@ export default function Header() {
 							HOME
 						</Link>
 					</li>
-					<li className="header-link">
-						<Link href="/about" className="header-link-text">
-							ABOUT
-						</Link>
-					</li>
-					<li className="header-link">CONTACT</li>
 				</ul>
 			</div>
 		);
@@ -43,12 +37,6 @@ export default function Header() {
 							HOME
 						</Link>
 					</li>
-					<li className="header-link">
-						<Link href="/about" className="header-link-text">
-							ABOUT
-						</Link>
-					</li>
-					<li className="header-link">CONTACT</li>
 				</ul>
 			</div>
 		);

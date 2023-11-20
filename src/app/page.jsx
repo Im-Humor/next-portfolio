@@ -4,6 +4,7 @@ import ExpSection from "./expsection";
 import SpecialtySection from "./specialties";
 import Projects from "./projects";
 import Hero from "./hero";
+import Footer from "./footer";
 
 export default function Home() {
 	return (
@@ -20,6 +21,9 @@ export default function Home() {
 			</div>
 			<div className="projects-div">
 				<Projects />
+			</div>
+			<div className="footer-div-black">
+				<Footer />
 			</div>
 		</div>
 	);

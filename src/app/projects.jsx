@@ -3,7 +3,7 @@
 import "./projectsstyle.css";
 import { useState } from "react";
 
-export const ProjectCard = ({ imgsrc, title, subtext, tags }) => {
+export const ProjectCard = ({ imgsrc, imgsrc_lg, title, subtext, tags }) => {
 	const [expandState, setExpandState] = useState(false);
 
 	const handleExpandClick = () => {
