@@ -1,3 +1,15 @@
+.lol {
+
+}
+
+.footer-div-black {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-evenly;

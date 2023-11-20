@@ -64,13 +64,6 @@ html * {
     background-image: linear-gradient(to right, rgb(115, 92, 247), rgb(97, 221, 255));
 }
 
-.footer-div-black {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .hidden {
     display: none;
 }
