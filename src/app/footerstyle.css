@@ -2,19 +2,29 @@
 
 }
 
+#contact-link {
+    text-decoration: none;
+    color: lightgray;
+}
+
 .footer-div-black {
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding-bottom: 4rem;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-        width: 1200px;
+    width: 1000px;
+    flex-wrap: wrap;
+}
+
+.footer-container > div {
+    margin: 4rem 2rem 0;
 }
 
 .footer-container h4 {
@@ -29,7 +39,15 @@
 }
 
 .footer-about {
-    width: 30%;
+    max-width: 400px;
+}
+
+.footer-contact {
+    max-width: 200px;
+}
+
+.footer-social {
+    max-width: 150px;
 }
 
 .footer-social-desc img {

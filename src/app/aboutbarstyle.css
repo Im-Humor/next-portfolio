@@ -26,9 +26,11 @@
 
 .about-desc-content {
     margin-top: 2rem;
+    max-width: 80%;
 }
 
 .about-bar-container {
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 

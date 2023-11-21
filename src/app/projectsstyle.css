@@ -58,9 +58,17 @@
     margin: 2rem;
 }
 
-.project-card img {
+.project-card > img {
     box-shadow: none;
-    transition: 0.3s
+    transition: 0.3s;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.grey-overlay > img {
+    max-height: 80%;
 }
 
 .project-card img:hover {

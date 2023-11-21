@@ -20,7 +20,15 @@ export default function Footer() {
 					<h4>Contact Me</h4>
 				</div>
 				<div className="footer-contact-desc">
-					<p>daniel@danielmorris.me</p>
+					<p>
+						<a
+							href="mailto: daniel@danielmorris.me"
+							id="contact-link"
+						>
+							{" "}
+							daniel@danielmorris.me
+						</a>
+					</p>
 				</div>
 			</div>
 			<div className="footer-social">

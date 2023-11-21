@@ -34,7 +34,10 @@ export default function AboutBar() {
 				<div className="about-desc-content">
 					{" "}
 					<p>
-						Graduated from NAU, worked in marketing, now I develop!
+						Since graduating from Northern Arizona University in
+						2015, I have worked as an advertising professional, real
+						estate agent, and in IT support; but I'm thankful to
+						finally be pursuing my passion for web development!
 					</p>
 				</div>
 			</div>

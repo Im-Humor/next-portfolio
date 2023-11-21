@@ -23,7 +23,7 @@ export const ProjectCard = ({ imgsrc, imgsrc_lg, title, subtext, tags }) => {
 			{expandState == true && (
 				<div className="grey-overlay" onClick={handleCloseClick}>
 					<button className="overlay-close-button">CLOSE</button>
-					<img src={imgsrc} alt="text" />
+					<img src={imgsrc_lg} alt="text" />
 				</div>
 			)}
 		</div>
@@ -41,14 +41,10 @@ export default function Projects() {
 			</div>
 			<div className="project-cards">
 				<ProjectCard
-					imgsrc="/test_img.png"
-					title="test image"
-					subtext="CSS | HTML | JavaScript"
-				/>
-				<ProjectCard
-					imgsrc="test_img2.png"
-					title="test image 2"
-					subtext="CSS | HTML | Bootstrap"
+					imgsrc="/static/website_top_sq_zoom.jpg"
+					imgsrc_lg="/static/website_full.jpeg"
+					title="Portfolio Website"
+					subtext="React | Next.JS | CSS"
 				/>
 			</div>
 		</div>

@@ -5,14 +5,18 @@ export default function Hero() {
 		<div className="color-div hero-color-div">
 			<div className="hero-div">
 				<div className="hero-image">
-					<img src="/test_img.png" alt="" />
+					<img src="/static/danielmorris_headshot.jpg" alt="" />
 				</div>
 				<div className="hero-desc">
 					{" "}
 					<p className="hero-desc-greeting">HELLO! MY NAME IS</p>
 					<h3 className="hero-desc-name">DANIEL MORRIS</h3>
 					<h4 className="hero-desc-title">JUNIOR WEB DEVELOPER</h4>
-					<p className="hero-desc-desc">Welcome to my site</p>
+					<p className="hero-desc-desc">
+						I'm glad you found me! I am always looking for new
+						opportunities so please reach out if you think I'd be a
+						good fit!
+					</p>
 					<div className="hero-icons">
 						<div className="hero-icon-line">
 							{" "}
