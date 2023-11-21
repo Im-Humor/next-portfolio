@@ -13,9 +13,9 @@ export default function Hero() {
 					<h3 className="hero-desc-name">DANIEL MORRIS</h3>
 					<h4 className="hero-desc-title">JUNIOR WEB DEVELOPER</h4>
 					<p className="hero-desc-desc">
-						I'm glad you found me! I am always looking for new
-						opportunities so please reach out if you think I'd be a
-						good fit!
+						I&apos;m glad you found me! I am always looking for new
+						opportunities so please reach out if you think I&apos;d
+						be a good fit!
 					</p>
 					<div className="hero-icons">
 						<div className="hero-icon-line">
