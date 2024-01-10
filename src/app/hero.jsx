@@ -20,11 +20,6 @@ export default function Hero() {
 					<div className="hero-icons">
 						<div className="hero-icon-line">
 							{" "}
-							<img src="/static/phone-svgrepo-com.svg" alt="" />
-							623-810-4117
-						</div>
-						<div className="hero-icon-line">
-							{" "}
 							<img src="/static/mail-svgrepo-com.svg" alt="" />
 							daniel@danielmorris.me
 						</div>
