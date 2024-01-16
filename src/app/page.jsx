@@ -1,4 +1,5 @@
 import "./globalstyle.css";
+import Header from "./Header";
 import AboutBar from "./aboutbar";
 import ExpSection from "./expsection";
 import SpecialtySection from "./specialties";
@@ -9,6 +10,7 @@ import Footer from "./footer";
 export default function Home() {
 	return (
 		<div className="home-container">
+			<Header />
 			<Hero />
 			<div className="white-div under-hero">
 				<AboutBar />

@@ -23,6 +23,9 @@ export default function Header() {
 						<Link href="/" className="header-link-text">
 							HOME
 						</Link>
+						<Link href="/blog" className="header-link-text">
+							BLOG
+						</Link>
 					</li>
 				</ul>
 			</div>
