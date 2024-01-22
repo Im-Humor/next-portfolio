@@ -20,12 +20,14 @@ export default function Header() {
 				<div className="header-name">DANIEL MORRIS</div>
 				<ul className="header-links">
 					<li className="header-link">
-						<Link href="/" className="header-link-text">
+						<a href="/" className="header-link-text">
 							HOME
-						</Link>
-						<Link href="/blog" className="header-link-text">
+						</a>
+					</li>
+					<li className="header-link">
+						<a href="/blog" className="header-link-text">
 							BLOG
-						</Link>
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -38,6 +40,11 @@ export default function Header() {
 					<li className="header-link">
 						<Link href="/" className="header-link-text">
 							HOME
+						</Link>
+					</li>
+					<li className="header-link">
+						<Link href="/blog" className="header-link-text">
+							BLOG
 						</Link>
 					</li>
 				</ul>

@@ -1,4 +1,5 @@
 import "../../globalstyle.css";
+import "../blogstyle.css";
 import Header from "../../Header";
 import Footer from "../../footer";
 import { cookies } from "next/headers";
@@ -68,9 +69,8 @@ export default function BlogLogin() {
 	return (
 		<div className="blog-login-container">
 			<Header />
-			<div className="color-div">
-				<h2>Please login to blog</h2>
-				<form action={loginUser}>
+			<div className="color-div form-div">
+				<form action={loginUser} className="blog-login-form">
 					<label htmlFor="username">Username:</label>
 					<input
 						type="text"
@@ -91,7 +91,7 @@ export default function BlogLogin() {
 				</form>
 
 				<h3>Create user</h3>
-				<form action={createUser}>
+				<form action={createUser} className="blog-create-user-form">
 					<label htmlFor="first_name">First name:</label>
 					<input
 						type="text"
