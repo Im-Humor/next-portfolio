@@ -77,7 +77,18 @@ export default function AboutBar() {
 
 				<div className="about-bar-container">
 					{" "}
-					<h4>React / Next.JS 65%</h4>
+					<h4>React / Next.JS 75%</h4>
+					<div className="about-bar-outer">
+						<div
+							className="about-bar-inner bar-load"
+							id="react"
+						></div>
+					</div>
+				</div>
+
+				<div className="about-bar-container">
+					{" "}
+					<h4>Express 75%</h4>
 					<div className="about-bar-outer">
 						<div
 							className="about-bar-inner bar-load"

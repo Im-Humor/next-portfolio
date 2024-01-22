@@ -1,13 +1,17 @@
 import "../globalstyle.css";
+import "./blogstyle.css";
 import Header from "../Header";
 import Footer from "../footer";
+import BlogHero from "./bloghero";
+import PostSection from "./postsection";
 
 export default function Blog() {
 	return (
 		<div className="blog-container">
 			<Header />
-			<div className="color-div">
-				<h2>Welcome to my blog</h2>
+			<BlogHero />
+			<div className="white-div under-hero">
+				<PostSection />
 			</div>
 
 			<div className="footer-div-black">

@@ -1,3 +1,24 @@
 .blog-container.color-div {
     height: 500px;
 }
+
+.post-container {
+    background-color: white;
+    height: auto;
+    margin-bottom: 3rem;
+    top: 6rem;
+    width: 1200px;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0px 10px 30px rgba(212, 212, 212, 0.5);
+    z-index: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.post-date {
+    margin-bottom: 2rem;
+    font-size: 12px;
+}
