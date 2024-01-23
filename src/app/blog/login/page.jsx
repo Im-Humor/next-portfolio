@@ -6,6 +6,7 @@ import { cookies } from "next/headers";
 require("dotenv").config();
 import setCookie from "set-cookie-parser";
 import { redirect } from "next/navigation";
+import BlogHero from "../bloghero";
 
 export default function BlogLogin() {
 	//function for logging in user and generating token
@@ -67,75 +68,82 @@ export default function BlogLogin() {
 		}
 	}
 	return (
-		<div className="blog-login-container">
+		<div className="blog-container">
 			<Header />
-			<div className="color-div form-div">
-				<form action={loginUser} className="blog-login-form">
-					<label htmlFor="username">Username:</label>
-					<input
-						type="text"
-						id="username"
-						name="username"
-						required="true"
-						max="100"
-					/>
-					<label htmlFor="password">Password:</label>
-					<input
-						type="text"
-						id="password"
-						name="password"
-						required="true"
-						max="100"
-					/>
-					<button>Submit</button>
-				</form>
+			<BlogHero>BLOG</BlogHero>
+			<div className="white-div under-hero">
+				<div className="blog-login-container">
+					<div className="blog-login-hover">
+						<h3>Login form</h3>
+						<form action={loginUser} className="blog-login-form">
+							<label htmlFor="username">Username:</label>
+							<input
+								type="text"
+								id="username"
+								name="username"
+								required="true"
+								max="100"
+							/>
+							<label htmlFor="password">Password:</label>
+							<input
+								type="text"
+								id="password"
+								name="password"
+								required="true"
+								max="100"
+							/>
+							<button>Submit</button>
+						</form>
 
-				<h3>Create user</h3>
-				<form action={createUser} className="blog-create-user-form">
-					<label htmlFor="first_name">First name:</label>
-					<input
-						type="text"
-						id="first_name"
-						name="first_name"
-						required="true"
-						max="100"
-					/>
-					<label htmlFor="last_name">Last name:</label>
-					<input
-						type="text"
-						id="last_name"
-						name="last_name"
-						required="true"
-						max="100"
-					/>
-					<label htmlFor="email">Email:</label>
-					<input
-						type="email"
-						id="email"
-						name="email"
-						required="true"
-						max="320"
-					/>
-					<label htmlFor="username">Username:</label>
-					<input
-						type="text"
-						id="username"
-						name="username"
-						required="true"
-						max="100"
-					/>
-					<label htmlFor="password">Password:</label>
-					<input
-						type="text"
-						id="password"
-						name="password"
-						required="true"
-						max="1000"
-					/>
-					<button type="submit">Submit</button>
-				</form>
-
-				<h3>Login form</h3>
+						<h3>Create user</h3>
+						<form
+							action={createUser}
+							className="blog-create-user-form"
+						>
+							<label htmlFor="first_name">First name:</label>
+							<input
+								type="text"
+								id="first_name"
+								name="first_name"
+								required="true"
+								max="100"
+							/>
+							<label htmlFor="last_name">Last name:</label>
+							<input
+								type="text"
+								id="last_name"
+								name="last_name"
+								required="true"
+								max="100"
+							/>
+							<label htmlFor="email">Email:</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								required="true"
+								max="320"
+							/>
+							<label htmlFor="username">Username:</label>
+							<input
+								type="text"
+								id="username"
+								name="username"
+								required="true"
+								max="100"
+							/>
+							<label htmlFor="password">Password:</label>
+							<input
+								type="text"
+								id="password"
+								name="password"
+								required="true"
+								max="1000"
+							/>
+							<button type="submit">Submit</button>
+						</form>
+					</div>
+				</div>
 			</div>
 
 			<div className="footer-div-black">

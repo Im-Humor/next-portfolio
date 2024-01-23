@@ -1,7 +1,7 @@
 "use client";
 
-import "../aboutbarstyle.css";
-import "./blogstyle.css";
+import "@/app/aboutbarstyle.css";
+import "@/app/blog/blogstyle.css";
 import { useEffect, useState } from "react";
 
 function BlogPosts({ posts }) {
