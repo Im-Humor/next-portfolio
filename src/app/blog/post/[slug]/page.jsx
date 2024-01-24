@@ -52,7 +52,7 @@ function Post({ post, params }) {
 	async function formSubmit(formData) {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/api/posts/${params.slug}`,
+				`http://localhost:5000/api/posts/${params.slug}/comment`,
 				{
 					cache: "no-store",
 					method: "POST",

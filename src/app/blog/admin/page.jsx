@@ -8,18 +8,69 @@ import BlogHero from "../bloghero";
 
 import { useEffect, useState } from "react";
 
-function BlogPosts({ posts }) {
-	const postList = posts.map((post) => (
+function Post({ post }) {
+	const [editing, setEditing] = useState(false);
+
+	async function updatePost(formData) {
+		const response = await fetch(
+			`http://localhost:5000/api/posts/${post._id}`,
+			{
+				cache: "no-store",
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				credentials: "include",
+				body: JSON.stringify(Object.fromEntries(formData)),
+			}
+		);
+		if (response.ok) {
+			window.location.reload();
+		}
+	}
+
+	return (
 		<div className="post-container" key={post._id}>
-			<ul className="post-list">
-				<li className="post-title">
-					<a href={`/blog/post/${post._id}`}>{post.title}</a>
-				</li>
-				<li className="post-content">{post.content}</li>
-				<li className="post-date">{post.date}</li>
-			</ul>
+			{editing ? (
+				<form action={updatePost}>
+					<input
+						type="text"
+						id="title"
+						name="title"
+						defaultValue={post.title}
+					/>
+					<input
+						type="text"
+						id="content"
+						name="content"
+						defaultValue={post.content}
+					/>
+					<button>Submit</button>
+				</form>
+			) : (
+				<ul className="post-list">
+					<li className="post-title">
+						<a href={`/blog/post/${post._id}`}>{post.title}</a>
+					</li>
+					<li className="post-content">{post.content}</li>
+					<li className="post-date">{post.date}</li>
+					<li>
+						<button
+							onClick={() => {
+								setEditing(true);
+							}}
+						>
+							Edit
+						</button>
+					</li>
+				</ul>
+			)}
 		</div>
-	));
+	);
+}
+
+function BlogPosts({ posts }) {
+	const postList = posts.map((post) => <Post post={post} key={post._id} />);
 	return postList;
 }
 
