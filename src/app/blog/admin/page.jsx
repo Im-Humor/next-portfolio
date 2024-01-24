@@ -63,6 +63,9 @@ export default function AdminPage() {
 			credentials: "include",
 			body: JSON.stringify(Object.fromEntries(formData)),
 		});
+		if (response.ok) {
+			window.location.reload();
+		}
 	}
 
 	return (
