@@ -2,6 +2,8 @@
     height: 500px;
 }
 
+
+
 .post-container {
     background-color: white;
     height: auto;
@@ -90,6 +92,19 @@
     align-items: center;
 }
 
+.admin-post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-post-form input {
+    border: 2px solid lightgray;
+}
+
+.admin-post-form textarea {
+    border: 2px solid lightgray;
+}
+
 .post-content-container {
     margin-top: 10rem;
     display: flex;
@@ -98,12 +113,20 @@
     align-items: center;
 }
 
+.post-content {
+    white-space: pre-wrap;
+}
+
+.post-container * {
+    width: 100%;
+}
+
 .comment-container {
     background-color: white;
     height: auto;
     margin-bottom: 3rem;
     top: 6rem;
-    width: 1200px;
+    width: 100%;
     border-radius: 10px;
     padding: 3rem;
     box-shadow: 0px 10px 30px rgba(212, 212, 212, 0.5);
@@ -113,4 +136,21 @@
     align-items: center;
     flex-wrap: wrap;
 
+}
+
+.comment-header {
+    margin: 2rem 0;
+}
+
+.comment-date {
+    font-size: 12px;
+    margin-bottom: 2rem;
+}
+
+.post-info-container button {
+    width: 100px;
+}
+
+.post-info-container input {
+    border: 2px solid lightgray;
 }

@@ -9,7 +9,12 @@ function BlogPosts({ posts }) {
 		<div className="post-container" key={post._id}>
 			<ul className="post-list">
 				<li className="post-title">
-					<h4>{post.title}</h4>
+					<h4>
+						<a href={`http://localhost:3000/blog/post/${post._id}`}>
+							{" "}
+							{post.title}
+						</a>
+					</h4>
 				</li>
 				<li className="post-date">{post.date}</li>
 				<li className="post-content">{post.content}</li>

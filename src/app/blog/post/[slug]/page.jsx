@@ -7,52 +7,90 @@ import Footer from "@/app/footer";
 import BlogHero from "@/app/blog/bloghero";
 import { useState, useEffect } from "react";
 
-function Comments({ postComments }) {
+function Comment({ comment, loggedIn, params }) {
+	async function deleteComment(id) {
+		try {
+			const response = await fetch(
+				`http://localhost:5000/api/posts/${params.slug}/comments/${id}`,
+				{
+					cache: "no-store",
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					credentials: "include",
+				}
+			);
+			if (response.ok) {
+				window.location.reload();
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	}
+
+	if (comment.author_account) {
+		return (
+			<li className="comment-container" key={comment._id}>
+				<ul className="comment-list">
+					<li className="comment-name">
+						{comment.author_account.username}
+					</li>
+					<li className="comment-date">{comment.date}</li>
+					<li className="comment-post">{comment.content}</li>
+				</ul>
+				{loggedIn ? (
+					<button onClick={() => deleteComment(comment._id)}>
+						Delete
+					</button>
+				) : null}
+			</li>
+		);
+	} else {
+		return (
+			<li className="comment-container" key={comment._id}>
+				<ul className="comment-list">
+					<li className="comment-name">{comment.author_name}</li>
+					<li className="comment-date">{comment.date}</li>
+					<li className="comment-post">{comment.content}</li>
+				</ul>
+				{loggedIn ? (
+					<button onClick={() => deleteComment(comment._id)}>
+						Delete
+					</button>
+				) : null}
+			</li>
+		);
+	}
+}
+
+function Comments({ postComments, loggedIn, params }) {
 	if (postComments && postComments.length > 0) {
 		postComments.forEach((comment) => {
 			comment.date = new Date(comment.date);
 			comment.date = comment.date.toDateString();
 		});
-		const commentItems = postComments.map((comment) => {
-			if (comment.author_account) {
-				return (
-					<li className="comment-container" key={comment._id}>
-						<ul className="comment-list">
-							<li className="comment-name">
-								{comment.author_account.username}
-							</li>
-							<li className="comment-date">{comment.date}</li>
-							<li className="comment-post">{comment.content}</li>
-						</ul>
-					</li>
-				);
-			} else {
-				return (
-					<li className="comment-container" key={comment._id}>
-						<ul className="comment-list">
-							<li className="comment-name">
-								{comment.author_name}
-							</li>
-							<li className="comment-date">{comment.date}</li>
-							<li className="comment-post">{comment.content}</li>
-						</ul>
-					</li>
-				);
-			}
-		});
+		const commentItems = postComments.map((comment) => (
+			<Comment
+				comment={comment}
+				key={comment._id}
+				loggedIn={loggedIn}
+				params={params}
+			/>
+		));
 		return commentItems;
 	} else {
 		return null;
 	}
 }
 
-function Post({ post, params }) {
+function Post({ post, loggedIn, params }) {
 	const [commentForm, setCommentForm] = useState(false);
 
 	async function formSubmit(formData) {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/api/posts/${params.slug}/comment`,
+				`http://localhost:5000/api/posts/${params.slug}/comments`,
 				{
 					cache: "no-store",
 					method: "POST",
@@ -81,7 +119,14 @@ function Post({ post, params }) {
 					</li>
 					<li className="post-date">{post.date}</li>
 					<li className="post-content">{post.content}</li>
-					<Comments postComments={post.comments} />
+					<li className="comment-header">
+						<h4>Comments:</h4>
+					</li>
+					<Comments
+						postComments={post.comments}
+						loggedIn={loggedIn}
+						params={params}
+					/>
 					{commentForm ? (
 						<li className="comment-form-item">
 							<form action={formSubmit} className="comment-form">
@@ -114,6 +159,7 @@ function Post({ post, params }) {
 
 export default function PostPage({ params }) {
 	const [post, setPost] = useState({});
+	const [loggedIn, setLoggedIn] = useState(false);
 
 	useEffect(() => {
 		(async () => {
@@ -134,8 +180,28 @@ export default function PostPage({ params }) {
 					window.location.href = "http://localhost:3000/blog/";
 				} else {
 					const data = await response.json();
-					console.log(data);
+					data.date = new Date(data.date);
+					data.date = data.date.toDateString();
 					setPost(data);
+				}
+			} catch (err) {
+				console.error(err);
+			}
+			try {
+				const response = await fetch(
+					`http://localhost:5000/api/users/authuser`,
+					{
+						cache: "no-store",
+						method: "GET",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						credentials: "include",
+					}
+				);
+
+				if (response.ok) {
+					setLoggedIn(true);
 				}
 			} catch (err) {
 				console.error(err);
@@ -147,8 +213,8 @@ export default function PostPage({ params }) {
 		<div className="post-info-container">
 			<Header />
 			<BlogHero>BLOG</BlogHero>
-			<div className="white-div under-hero">
-				<Post post={post} params={params} />
+			<div className="white-div-blog under-hero">
+				<Post post={post} loggedIn={loggedIn} params={params} />
 			</div>
 
 			<div className="footer-div-black">

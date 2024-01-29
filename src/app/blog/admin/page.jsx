@@ -1,10 +1,10 @@
 "use client";
 
-import "../../globalstyle.css";
-import "../blogstyle.css";
-import Header from "../../Header";
-import Footer from "../../footer";
-import BlogHero from "../bloghero";
+import "@/app/globalstyle.css";
+import "@/app/blog/blogstyle.css";
+import Header from "@/app/Header";
+import Footer from "@/app/footer";
+import BlogHero from "@/app/blog/bloghero";
 
 import { useEffect, useState } from "react";
 
@@ -12,6 +12,9 @@ function Post({ post }) {
 	const [editing, setEditing] = useState(false);
 
 	async function updatePost(formData) {
+		if (formData.get("published") == null) {
+			formData.append("published", "false");
+		}
 		const response = await fetch(
 			`http://localhost:5000/api/posts/${post._id}`,
 			{
@@ -29,29 +32,63 @@ function Post({ post }) {
 		}
 	}
 
+	async function deletePost(id) {
+		const response = await fetch(
+			`http://localhost:5000/api/posts/${post._id}`,
+			{
+				cache: "no-store",
+				method: "DELETE",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				credentials: "include",
+			}
+		);
+		if (response.ok) {
+			window.location.reload();
+		}
+	}
+
 	return (
 		<div className="post-container" key={post._id}>
 			{editing ? (
-				<form action={updatePost}>
-					<input
-						type="text"
-						id="title"
-						name="title"
-						defaultValue={post.title}
-					/>
-					<input
-						type="text"
-						id="content"
-						name="content"
-						defaultValue={post.content}
-					/>
-					<button>Submit</button>
-				</form>
+				<div className="edit-form-container">
+					{" "}
+					<form action={updatePost}>
+						<input
+							type="text"
+							id="title"
+							name="title"
+							defaultValue={post.title}
+						/>
+						<input
+							type="text"
+							id="content"
+							name="content"
+							defaultValue={post.content}
+						/>
+						<input
+							type="checkbox"
+							id="published"
+							name="published"
+							value="true"
+						/>
+						<button>Submit</button>
+					</form>
+					<button
+						onClick={() => {
+							deletePost(post._id);
+						}}
+					>
+						Delete
+					</button>
+				</div>
 			) : (
 				<ul className="post-list">
 					<li className="post-title">
 						<a href={`/blog/post/${post._id}`}>{post.title}</a>
 					</li>
+					<li>Published: {post.published.toString()}</li>
 					<li className="post-content">{post.content}</li>
 					<li className="post-date">{post.date}</li>
 					<li>
@@ -129,7 +166,12 @@ export default function AdminPage() {
 						<label htmlFor="title">Title:</label>
 						<input type="text" id="title" name="title" />
 						<label htmlFor="content">Content:</label>
-						<input type="text" id="content" name="content" />
+						<textarea
+							id="content"
+							name="content"
+							rows="10"
+							cols="100"
+						/>
 						<label htmlFor="published">Published:</label>
 						<input
 							type="checkbox"
