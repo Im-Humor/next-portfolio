@@ -10,7 +10,9 @@ function BlogPosts({ posts }) {
 			<ul className="post-list">
 				<li className="post-title">
 					<h4>
-						<a href={`http://localhost:3000/blog/post/${post._id}`}>
+						<a
+							href={`https://www.danielmorris.me/blog/post/${post._id}`}
+						>
 							{" "}
 							{post.title}
 						</a>
@@ -43,7 +45,7 @@ export default function PostSection() {
 				);
 
 				if (!response.ok) {
-					window.location.href = "http://localhost:3000/";
+					window.location.href = "https://www.danielmorris.me/";
 				} else {
 					const data = await response.json();
 					data.forEach((post) => {

@@ -177,7 +177,7 @@ export default function PostPage({ params }) {
 				);
 
 				if (!response.ok) {
-					window.location.href = "http://localhost:3000/blog/";
+					window.location.href = "https://www.danielmorris.me/blog/";
 				} else {
 					const data = await response.json();
 					data.date = new Date(data.date);

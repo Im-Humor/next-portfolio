@@ -39,7 +39,7 @@ export default function BlogLogin() {
 		} catch (err) {
 			console.log(err);
 		}
-		redirect("http://localhost:3000/blog/admin");
+		redirect("https://www.danielmorris.me/blog/admin");
 	}
 
 	//function for creating new user in database and hashing password

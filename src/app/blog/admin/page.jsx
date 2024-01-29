@@ -130,7 +130,8 @@ export default function AdminPage() {
 				);
 
 				if (!response.ok) {
-					window.location.href = "http://localhost:3000/blog/login";
+					window.location.href =
+						"https://www.danielmorris.me/blog/login";
 				} else {
 					const data = await response.json();
 					setPosts(data);
