@@ -16,7 +16,7 @@ function Post({ post }) {
 			formData.append("published", "false");
 		}
 		const response = await fetch(
-			`http://localhost:5000/api/posts/${post._id}`,
+			`https://fish-berry-health.glitch.me/api/posts/${post._id}`,
 			{
 				cache: "no-store",
 				method: "POST",
@@ -34,7 +34,7 @@ function Post({ post }) {
 
 	async function deletePost(id) {
 		const response = await fetch(
-			`http://localhost:5000/api/posts/${post._id}`,
+			`https://fish-berry-health.glitch.me/api/posts/${post._id}`,
 			{
 				cache: "no-store",
 				method: "DELETE",
@@ -118,7 +118,7 @@ export default function AdminPage() {
 		(async () => {
 			try {
 				const response = await fetch(
-					"http://localhost:5000/api/users/posts",
+					"https://fish-berry-health.glitch.me/api/users/posts",
 					{
 						cache: "no-store",
 						method: "GET",
@@ -142,15 +142,18 @@ export default function AdminPage() {
 	}, []);
 
 	async function newPost(formData) {
-		const response = await fetch("http://localhost:5000/api/posts", {
-			cache: "no-store",
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			credentials: "include",
-			body: JSON.stringify(Object.fromEntries(formData)),
-		});
+		const response = await fetch(
+			"https://fish-berry-health.glitch.me/api/posts",
+			{
+				cache: "no-store",
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				credentials: "include",
+				body: JSON.stringify(Object.fromEntries(formData)),
+			}
+		);
 		if (response.ok) {
 			window.location.reload();
 		}

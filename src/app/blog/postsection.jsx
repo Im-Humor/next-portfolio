@@ -31,7 +31,7 @@ export default function PostSection() {
 		(async () => {
 			try {
 				const response = await fetch(
-					"http://localhost:5000/api/posts",
+					"https://fish-berry-health.glitch.me/api/posts",
 					{
 						cache: "no-store",
 						method: "GET",

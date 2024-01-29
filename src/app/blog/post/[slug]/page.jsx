@@ -11,7 +11,7 @@ function Comment({ comment, loggedIn, params }) {
 	async function deleteComment(id) {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/api/posts/${params.slug}/comments/${id}`,
+				`https://fish-berry-health.glitch.me/api/posts/${params.slug}/comments/${id}`,
 				{
 					cache: "no-store",
 					method: "DELETE",
@@ -90,7 +90,7 @@ function Post({ post, loggedIn, params }) {
 	async function formSubmit(formData) {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/api/posts/${params.slug}/comments`,
+				`https://fish-berry-health.glitch.me/api/posts/${params.slug}/comments`,
 				{
 					cache: "no-store",
 					method: "POST",
@@ -165,7 +165,7 @@ export default function PostPage({ params }) {
 		(async () => {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/api/posts/${params.slug}`,
+					`https://fish-berry-health.glitch.me/api/posts/${params.slug}`,
 					{
 						cache: "no-store",
 						method: "GET",
@@ -189,7 +189,7 @@ export default function PostPage({ params }) {
 			}
 			try {
 				const response = await fetch(
-					`http://localhost:5000/api/users/authuser`,
+					`https://fish-berry-health.glitch.me/api/users/authuser`,
 					{
 						cache: "no-store",
 						method: "GET",
