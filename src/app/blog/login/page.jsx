@@ -15,7 +15,7 @@ export default function BlogLogin() {
 		try {
 			console.log("fetching");
 			const response = await fetch(
-				`https://fish-berry-health.glitch.me/users/login`,
+				`https://fish-berry-health.glitch.me/api/users/login`,
 				{
 					cache: "no-store",
 					method: "POST",
@@ -50,9 +50,9 @@ export default function BlogLogin() {
 		console.log(Object.fromEntries(formData));
 
 		try {
-			console.log(`https://fish-berry-health.glitch.me/users/create`);
+			console.log(`https://fish-berry-health.glitch.me/api/users/create`);
 			const result = await fetch(
-				`https://fish-berry-health.glitch.me/users/create`,
+				`https://fish-berry-health.glitch.me/api/users/create`,
 				{
 					cache: "no-store",
 					method: "POST",
