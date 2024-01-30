@@ -122,6 +122,7 @@ export default function AdminPage() {
 					{
 						cache: "no-store",
 						method: "GET",
+						mode: "cors",
 						headers: {
 							"Content-Type": "application/json",
 						},
