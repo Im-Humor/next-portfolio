@@ -31,6 +31,7 @@ export default function BlogLogin() {
 				newCookies.access_token.name,
 				newCookies.access_token.value,
 				{
+					domain: "glitch.com",
 					httpOnly: true,
 					path: "/",
 				}
