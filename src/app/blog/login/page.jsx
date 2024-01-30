@@ -31,7 +31,7 @@ export default function BlogLogin() {
 				newCookies.access_token.name,
 				newCookies.access_token.value,
 				{
-					domain: "https://fish-berry-health.glitch.me",
+					sameSite: "none",
 					secure: true,
 					httpOnly: true,
 					path: "/",
