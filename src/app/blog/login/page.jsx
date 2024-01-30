@@ -33,6 +33,7 @@ export default function BlogLogin() {
 				{
 					httpOnly: true,
 					path: "/",
+					secure: true,
 				}
 			);
 			console.log("fetched");
