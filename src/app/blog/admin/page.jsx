@@ -16,7 +16,7 @@ function Post({ post }) {
 			formData.append("published", "false");
 		}
 		const response = await fetch(
-			`https://fish-berry-health.glitch.me/api/posts/${post._id}`,
+			`https://blog-api-production-52c3.up.railway.app/api/posts/${post._id}`,
 			{
 				cache: "no-store",
 				method: "POST",
@@ -34,7 +34,7 @@ function Post({ post }) {
 
 	async function deletePost(id) {
 		const response = await fetch(
-			`https://fish-berry-health.glitch.me/api/posts/${post._id}`,
+			`https://blog-api-production-52c3.up.railway.app/api/posts/${post._id}`,
 			{
 				cache: "no-store",
 				method: "DELETE",
@@ -118,7 +118,7 @@ export default function AdminPage() {
 		(async () => {
 			try {
 				const response = await fetch(
-					"https://fish-berry-health.glitch.me/api/users/posts",
+					"https://blog-api-production-52c3.up.railway.app/api/users/posts",
 					{
 						cache: "no-store",
 						method: "GET",
@@ -145,7 +145,7 @@ export default function AdminPage() {
 
 	async function newPost(formData) {
 		const response = await fetch(
-			"https://fish-berry-health.glitch.me/api/posts",
+			"https://blog-api-production-52c3.up.railway.app/api/posts",
 			{
 				cache: "no-store",
 				method: "POST",

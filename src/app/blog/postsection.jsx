@@ -33,7 +33,7 @@ export default function PostSection() {
 		(async () => {
 			try {
 				const response = await fetch(
-					"https://fish-berry-health.glitch.me/api/posts",
+					"https://blog-api-production-52c3.up.railway.app/api/posts",
 					{
 						cache: "no-store",
 						method: "GET",
